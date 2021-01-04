@@ -1,0 +1,524 @@
+TLC2 Version 2.14 of 10 July 2019 (rev: 0cae24f)
+Running breadth-first search Model-Checking with fp 110 and seed 4815144235202083243 with 3 workers on 4 cores with 3641MB heap and 64MB offheap memory (Windows 10 10.0 amd64, Oracle Corporation 1.8.0_251 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file D:\workspace\EmergencyCall\model\EmergencyCall_Model_auto.tla
+Parsing file C:\Users\mikew\AppData\Local\Temp\Naturals.tla
+Parsing file C:\Users\mikew\AppData\Local\Temp\Sequences.tla
+Parsing file C:\Users\mikew\AppData\Local\Temp\FiniteSets.tla
+Parsing file C:\Users\mikew\AppData\Local\Temp\TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module EmergencyCall_Model_auto
+Starting... (2020-06-12 20:43:06)
+Computing initial states...
+Computed 2 initial states...
+Computed 4 initial states...
+Computed 8 initial states...
+Computed 16 initial states...
+Computed 32 initial states...
+Computed 64 initial states...
+Computed 128 initial states...
+Computed 256 initial states...
+Computed 512 initial states...
+Computed 1024 initial states...
+Computed 2048 initial states...
+Computed 4096 initial states...
+Computed 8192 initial states...
+Computed 16384 initial states...
+Computed 32768 initial states...
+Computed 65536 initial states...
+Finished computing initial states: 81920 distinct states generated at 2020-06-12 20:44:05.
+Progress(3) at 2020-06-12 20:44:08: 513,478 states generated (513,478 s/min), 483,141 distinct states found (483,141 ds/min), 394,180 states left on queue.
+Progress(6) at 2020-06-12 20:45:08: 22,745,928 states generated (22,232,450 s/min), 5,880,413 distinct states found (5,397,272 ds/min), 2,347,936 states left on queue.
+Progress(8) at 2020-06-12 20:46:08: 46,614,342 states generated (23,868,414 s/min), 10,706,538 distinct states found (4,826,125 ds/min), 3,309,982 states left on queue.
+Progress(9) at 2020-06-12 20:47:08: 68,859,373 states generated (22,245,031 s/min), 15,805,598 distinct states found (5,099,060 ds/min), 4,787,625 states left on queue.
+Progress(10) at 2020-06-12 20:48:08: 92,340,545 states generated (23,481,172 s/min), 20,614,977 distinct states found (4,809,379 ds/min), 5,766,602 states left on queue.
+Progress(11) at 2020-06-12 20:49:08: 118,091,054 states generated (25,750,509 s/min), 24,793,292 distinct states found (4,178,315 ds/min), 5,764,854 states left on queue.
+Progress(11) at 2020-06-12 20:50:08: 141,614,532 states generated (23,523,478 s/min), 29,826,644 distinct states found (5,033,352 ds/min), 7,277,761 states left on queue.
+Error: Invariant Attacks is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ amf_attach_accept_message = [emergency_number_list |-> {"911"}, mnc |-> "home1"]
+/\ ue_emergency_number_set = {"911"}
+/\ amf_0_normal_attach_accept_include_enl = 1
+/\ mnc_home_only = 0
+/\ amf_home_reject_or_allow_unmarked_emergency_request = 0
+/\ amf_roam_reject_or_allow_unmarked_emergency_request = 0
+/\ ue_emergency_setup_message = [number |-> "911", category |-> "police"]
+/\ amf_call_failure_message = [error_code |-> "none"]
+/\ amf_0_emergency_attach_accept_include_enl = 0
+/\ enable_adversary = 1
+/\ ue_current_mnc = "home1"
+/\ amf_allow_emergency_attach = 0
+/\ amf_emergency_number_set = {"911"}
+/\ amf_home_require_emergency_registration_for_emergency_session = 0
+/\ ue_valid_subscription = 0
+/\ amf_roam_route_with_type_or_number = 0
+/\ mnc_set = {"home0", "home1", "roam0", "roam1"}
+/\ amf_1_emergency_attach_accept_include_enl = 0
+/\ pc_UE = "ue_emm_deregistered"
+/\ ue_attach_request_message = [type |-> "normal"]
+/\ amf_call_connect_message = 0
+/\ amf_roam0_emergency_number_set = {"911"}
+/\ amf_home_route_with_type_or_number = 0
+/\ ecc_localization_enabled = 0
+/\ amf_allow_emergency_setup = 1
+/\ user_dial_number = "0"
+/\ ue_dial_emergency = 0
+/\ amf_roam1_emergency_number_set = {"911"}
+/\ user_make_call = 0
+/\ amf_home0_emergency_number_set = {"224"}
+/\ routed_psap = "none"
+/\ ecc_localization_enabled_mnc_set = {"home1"}
+/\ amf_home1_emergency_number_set = {"911"}
+/\ ue_sim_card_present = 1
+/\ amf_1_normal_attach_accept_include_enl = 0
+/\ screen_locked = 0
+/\ ue_detach_request_message = 0
+/\ pc_AMF = "amf_emm_deregistered"
+
+State 2: <UE_send_normal_attach_request line 199, col 9 to line 204, col 1051 of module EmergencyCall_Model_auto>
+/\ amf_attach_accept_message = [emergency_number_list |-> {"911"}, mnc |-> "home1"]
+/\ ue_emergency_number_set = {"911"}
+/\ amf_0_normal_attach_accept_include_enl = 1
+/\ mnc_home_only = 0
+/\ amf_home_reject_or_allow_unmarked_emergency_request = 0
+/\ amf_roam_reject_or_allow_unmarked_emergency_request = 0
+/\ ue_emergency_setup_message = [number |-> "911", category |-> "police"]
+/\ amf_call_failure_message = [error_code |-> "none"]
+/\ amf_0_emergency_attach_accept_include_enl = 0
+/\ enable_adversary = 1
+/\ ue_current_mnc = "home1"
+/\ amf_allow_emergency_attach = 0
+/\ amf_emergency_number_set = {"911"}
+/\ amf_home_require_emergency_registration_for_emergency_session = 0
+/\ ue_valid_subscription = 0
+/\ amf_roam_route_with_type_or_number = 0
+/\ mnc_set = {"home0", "home1", "roam0", "roam1"}
+/\ amf_1_emergency_attach_accept_include_enl = 0
+/\ pc_UE = "ue_emm_registered_initiated"
+/\ ue_attach_request_message = [type |-> "normal"]
+/\ amf_call_connect_message = 0
+/\ amf_roam0_emergency_number_set = {"911"}
+/\ amf_home_route_with_type_or_number = 0
+/\ ecc_localization_enabled = 0
+/\ amf_allow_emergency_setup = 1
+/\ user_dial_number = "0"
+/\ ue_dial_emergency = 0
+/\ amf_roam1_emergency_number_set = {"911"}
+/\ user_make_call = 0
+/\ amf_home0_emergency_number_set = {"224"}
+/\ routed_psap = "none"
+/\ ecc_localization_enabled_mnc_set = {"home1"}
+/\ amf_home1_emergency_number_set = {"911"}
+/\ ue_sim_card_present = 1
+/\ amf_1_normal_attach_accept_include_enl = 0
+/\ screen_locked = 0
+/\ ue_detach_request_message = 0
+/\ pc_AMF = "amf_emm_deregistered"
+
+State 3: <AMF_send_attach_response line 240, col 9 to line 307, col 1024 of module EmergencyCall_Model_auto>
+/\ amf_attach_accept_message = [emergency_number_list |-> {"224"}, mnc |-> "home0"]
+/\ ue_emergency_number_set = {"911"}
+/\ amf_0_normal_attach_accept_include_enl = 1
+/\ mnc_home_only = 0
+/\ amf_home_reject_or_allow_unmarked_emergency_request = 0
+/\ amf_roam_reject_or_allow_unmarked_emergency_request = 0
+/\ ue_emergency_setup_message = [number |-> "911", category |-> "police"]
+/\ amf_call_failure_message = [error_code |-> "none"]
+/\ amf_0_emergency_attach_accept_include_enl = 0
+/\ enable_adversary = 1
+/\ ue_current_mnc = "home1"
+/\ amf_allow_emergency_attach = 0
+/\ amf_emergency_number_set = {"224"}
+/\ amf_home_require_emergency_registration_for_emergency_session = 0
+/\ ue_valid_subscription = 0
+/\ amf_roam_route_with_type_or_number = 0
+/\ mnc_set = {"home0", "home1", "roam0", "roam1"}
+/\ amf_1_emergency_attach_accept_include_enl = 0
+/\ pc_UE = "ue_emm_registered_initiated"
+/\ ue_attach_request_message = [type |-> "normal"]
+/\ amf_call_connect_message = 0
+/\ amf_roam0_emergency_number_set = {"911"}
+/\ amf_home_route_with_type_or_number = 0
+/\ ecc_localization_enabled = 0
+/\ amf_allow_emergency_setup = 1
+/\ user_dial_number = "0"
+/\ ue_dial_emergency = 0
+/\ amf_roam1_emergency_number_set = {"911"}
+/\ user_make_call = 0
+/\ amf_home0_emergency_number_set = {"224"}
+/\ routed_psap = "none"
+/\ ecc_localization_enabled_mnc_set = {"home1"}
+/\ amf_home1_emergency_number_set = {"911"}
+/\ ue_sim_card_present = 1
+/\ amf_1_normal_attach_accept_include_enl = 0
+/\ screen_locked = 0
+/\ ue_detach_request_message = 0
+/\ pc_AMF = "amf_emm_registered"
+
+State 4: <UE_send_attach_complete line 312, col 9 to line 335, col 1037 of module EmergencyCall_Model_auto>
+/\ amf_attach_accept_message = [emergency_number_list |-> {"224"}, mnc |-> "home0"]
+/\ ue_emergency_number_set = {"911", "224"}
+/\ amf_0_normal_attach_accept_include_enl = 1
+/\ mnc_home_only = 0
+/\ amf_home_reject_or_allow_unmarked_emergency_request = 0
+/\ amf_roam_reject_or_allow_unmarked_emergency_request = 0
+/\ ue_emergency_setup_message = [number |-> "911", category |-> "police"]
+/\ amf_call_failure_message = [error_code |-> "none"]
+/\ amf_0_emergency_attach_accept_include_enl = 0
+/\ enable_adversary = 1
+/\ ue_current_mnc = "home0"
+/\ amf_allow_emergency_attach = 0
+/\ amf_emergency_number_set = {"224"}
+/\ amf_home_require_emergency_registration_for_emergency_session = 0
+/\ ue_valid_subscription = 0
+/\ amf_roam_route_with_type_or_number = 0
+/\ mnc_set = {"home0", "home1", "roam0", "roam1"}
+/\ amf_1_emergency_attach_accept_include_enl = 0
+/\ pc_UE = "ue_emm_registered"
+/\ ue_attach_request_message = [type |-> "normal"]
+/\ amf_call_connect_message = 0
+/\ amf_roam0_emergency_number_set = {"911"}
+/\ amf_home_route_with_type_or_number = 0
+/\ ecc_localization_enabled = 0
+/\ amf_allow_emergency_setup = 1
+/\ user_dial_number = "0"
+/\ ue_dial_emergency = 0
+/\ amf_roam1_emergency_number_set = {"911"}
+/\ user_make_call = 0
+/\ amf_home0_emergency_number_set = {"224"}
+/\ routed_psap = "none"
+/\ ecc_localization_enabled_mnc_set = {"home1"}
+/\ amf_home1_emergency_number_set = {"911"}
+/\ ue_sim_card_present = 1
+/\ amf_1_normal_attach_accept_include_enl = 0
+/\ screen_locked = 0
+/\ ue_detach_request_message = 0
+/\ pc_AMF = "amf_emm_registered"
+
+State 5: <UE_send_detach_request line 578, col 9 to line 586, col 972 of module EmergencyCall_Model_auto>
+/\ amf_attach_accept_message = [emergency_number_list |-> {"224"}, mnc |-> "home0"]
+/\ ue_emergency_number_set = {"911", "224"}
+/\ amf_0_normal_attach_accept_include_enl = 1
+/\ mnc_home_only = 0
+/\ amf_home_reject_or_allow_unmarked_emergency_request = 0
+/\ amf_roam_reject_or_allow_unmarked_emergency_request = 0
+/\ ue_emergency_setup_message = [number |-> "911", category |-> "police"]
+/\ amf_call_failure_message = [error_code |-> "none"]
+/\ amf_0_emergency_attach_accept_include_enl = 0
+/\ enable_adversary = 1
+/\ ue_current_mnc = "home0"
+/\ amf_allow_emergency_attach = 0
+/\ amf_emergency_number_set = {"224"}
+/\ amf_home_require_emergency_registration_for_emergency_session = 0
+/\ ue_valid_subscription = 0
+/\ amf_roam_route_with_type_or_number = 0
+/\ mnc_set = {"home0", "home1", "roam0", "roam1"}
+/\ amf_1_emergency_attach_accept_include_enl = 0
+/\ pc_UE = "ue_emm_deregistered"
+/\ ue_attach_request_message = [type |-> "normal"]
+/\ amf_call_connect_message = 0
+/\ amf_roam0_emergency_number_set = {"911"}
+/\ amf_home_route_with_type_or_number = 0
+/\ ecc_localization_enabled = 0
+/\ amf_allow_emergency_setup = 1
+/\ user_dial_number = "0"
+/\ ue_dial_emergency = 0
+/\ amf_roam1_emergency_number_set = {"911"}
+/\ user_make_call = 0
+/\ amf_home0_emergency_number_set = {"224"}
+/\ routed_psap = "none"
+/\ ecc_localization_enabled_mnc_set = {"home1"}
+/\ amf_home1_emergency_number_set = {"911"}
+/\ ue_sim_card_present = 1
+/\ amf_1_normal_attach_accept_include_enl = 0
+/\ screen_locked = 0
+/\ ue_detach_request_message = 1
+/\ pc_AMF = "amf_emm_registered"
+
+State 6: <UE_send_normal_attach_request line 199, col 9 to line 204, col 1051 of module EmergencyCall_Model_auto>
+/\ amf_attach_accept_message = [emergency_number_list |-> {"224"}, mnc |-> "home0"]
+/\ ue_emergency_number_set = {"911", "224"}
+/\ amf_0_normal_attach_accept_include_enl = 1
+/\ mnc_home_only = 0
+/\ amf_home_reject_or_allow_unmarked_emergency_request = 0
+/\ amf_roam_reject_or_allow_unmarked_emergency_request = 0
+/\ ue_emergency_setup_message = [number |-> "911", category |-> "police"]
+/\ amf_call_failure_message = [error_code |-> "none"]
+/\ amf_0_emergency_attach_accept_include_enl = 0
+/\ enable_adversary = 1
+/\ ue_current_mnc = "home0"
+/\ amf_allow_emergency_attach = 0
+/\ amf_emergency_number_set = {"224"}
+/\ amf_home_require_emergency_registration_for_emergency_session = 0
+/\ ue_valid_subscription = 0
+/\ amf_roam_route_with_type_or_number = 0
+/\ mnc_set = {"home0", "home1", "roam0", "roam1"}
+/\ amf_1_emergency_attach_accept_include_enl = 0
+/\ pc_UE = "ue_emm_registered_initiated"
+/\ ue_attach_request_message = [type |-> "normal"]
+/\ amf_call_connect_message = 0
+/\ amf_roam0_emergency_number_set = {"911"}
+/\ amf_home_route_with_type_or_number = 0
+/\ ecc_localization_enabled = 0
+/\ amf_allow_emergency_setup = 1
+/\ user_dial_number = "0"
+/\ ue_dial_emergency = 0
+/\ amf_roam1_emergency_number_set = {"911"}
+/\ user_make_call = 0
+/\ amf_home0_emergency_number_set = {"224"}
+/\ routed_psap = "none"
+/\ ecc_localization_enabled_mnc_set = {"home1"}
+/\ amf_home1_emergency_number_set = {"911"}
+/\ ue_sim_card_present = 1
+/\ amf_1_normal_attach_accept_include_enl = 0
+/\ screen_locked = 0
+/\ ue_detach_request_message = 1
+/\ pc_AMF = "amf_emm_registered"
+
+State 7: <AMF_send_detach_accept line 590, col 9 to line 593, col 1050 of module EmergencyCall_Model_auto>
+/\ amf_attach_accept_message = [emergency_number_list |-> {"224"}, mnc |-> "home0"]
+/\ ue_emergency_number_set = {"911", "224"}
+/\ amf_0_normal_attach_accept_include_enl = 1
+/\ mnc_home_only = 0
+/\ amf_home_reject_or_allow_unmarked_emergency_request = 0
+/\ amf_roam_reject_or_allow_unmarked_emergency_request = 0
+/\ ue_emergency_setup_message = [number |-> "911", category |-> "police"]
+/\ amf_call_failure_message = [error_code |-> "none"]
+/\ amf_0_emergency_attach_accept_include_enl = 0
+/\ enable_adversary = 1
+/\ ue_current_mnc = "home0"
+/\ amf_allow_emergency_attach = 0
+/\ amf_emergency_number_set = {"224"}
+/\ amf_home_require_emergency_registration_for_emergency_session = 0
+/\ ue_valid_subscription = 0
+/\ amf_roam_route_with_type_or_number = 0
+/\ mnc_set = {"home0", "home1", "roam0", "roam1"}
+/\ amf_1_emergency_attach_accept_include_enl = 0
+/\ pc_UE = "ue_emm_registered_initiated"
+/\ ue_attach_request_message = [type |-> "normal"]
+/\ amf_call_connect_message = 0
+/\ amf_roam0_emergency_number_set = {"911"}
+/\ amf_home_route_with_type_or_number = 0
+/\ ecc_localization_enabled = 0
+/\ amf_allow_emergency_setup = 1
+/\ user_dial_number = "0"
+/\ ue_dial_emergency = 0
+/\ amf_roam1_emergency_number_set = {"911"}
+/\ user_make_call = 0
+/\ amf_home0_emergency_number_set = {"224"}
+/\ routed_psap = "none"
+/\ ecc_localization_enabled_mnc_set = {"home1"}
+/\ amf_home1_emergency_number_set = {"911"}
+/\ ue_sim_card_present = 1
+/\ amf_1_normal_attach_accept_include_enl = 0
+/\ screen_locked = 0
+/\ ue_detach_request_message = 0
+/\ pc_AMF = "amf_emm_deregistered"
+
+State 8: <AMF_send_attach_response line 240, col 9 to line 307, col 1024 of module EmergencyCall_Model_auto>
+/\ amf_attach_accept_message = [emergency_number_list |-> {}, mnc |-> "home1"]
+/\ ue_emergency_number_set = {"911", "224"}
+/\ amf_0_normal_attach_accept_include_enl = 1
+/\ mnc_home_only = 0
+/\ amf_home_reject_or_allow_unmarked_emergency_request = 0
+/\ amf_roam_reject_or_allow_unmarked_emergency_request = 0
+/\ ue_emergency_setup_message = [number |-> "911", category |-> "police"]
+/\ amf_call_failure_message = [error_code |-> "none"]
+/\ amf_0_emergency_attach_accept_include_enl = 0
+/\ enable_adversary = 1
+/\ ue_current_mnc = "home0"
+/\ amf_allow_emergency_attach = 0
+/\ amf_emergency_number_set = {"911"}
+/\ amf_home_require_emergency_registration_for_emergency_session = 0
+/\ ue_valid_subscription = 0
+/\ amf_roam_route_with_type_or_number = 0
+/\ mnc_set = {"home0", "home1", "roam0", "roam1"}
+/\ amf_1_emergency_attach_accept_include_enl = 0
+/\ pc_UE = "ue_emm_registered_initiated"
+/\ ue_attach_request_message = [type |-> "normal"]
+/\ amf_call_connect_message = 0
+/\ amf_roam0_emergency_number_set = {"911"}
+/\ amf_home_route_with_type_or_number = 0
+/\ ecc_localization_enabled = 0
+/\ amf_allow_emergency_setup = 1
+/\ user_dial_number = "0"
+/\ ue_dial_emergency = 0
+/\ amf_roam1_emergency_number_set = {"911"}
+/\ user_make_call = 0
+/\ amf_home0_emergency_number_set = {"224"}
+/\ routed_psap = "none"
+/\ ecc_localization_enabled_mnc_set = {"home1"}
+/\ amf_home1_emergency_number_set = {"911"}
+/\ ue_sim_card_present = 1
+/\ amf_1_normal_attach_accept_include_enl = 0
+/\ screen_locked = 0
+/\ ue_detach_request_message = 0
+/\ pc_AMF = "amf_emm_registered"
+
+State 9: <UE_send_attach_complete line 312, col 9 to line 335, col 1037 of module EmergencyCall_Model_auto>
+/\ amf_attach_accept_message = [emergency_number_list |-> {}, mnc |-> "home1"]
+/\ ue_emergency_number_set = {"911", "224"}
+/\ amf_0_normal_attach_accept_include_enl = 1
+/\ mnc_home_only = 0
+/\ amf_home_reject_or_allow_unmarked_emergency_request = 0
+/\ amf_roam_reject_or_allow_unmarked_emergency_request = 0
+/\ ue_emergency_setup_message = [number |-> "911", category |-> "police"]
+/\ amf_call_failure_message = [error_code |-> "none"]
+/\ amf_0_emergency_attach_accept_include_enl = 0
+/\ enable_adversary = 1
+/\ ue_current_mnc = "home1"
+/\ amf_allow_emergency_attach = 0
+/\ amf_emergency_number_set = {"911"}
+/\ amf_home_require_emergency_registration_for_emergency_session = 0
+/\ ue_valid_subscription = 0
+/\ amf_roam_route_with_type_or_number = 0
+/\ mnc_set = {"home0", "home1", "roam0", "roam1"}
+/\ amf_1_emergency_attach_accept_include_enl = 0
+/\ pc_UE = "ue_emm_registered"
+/\ ue_attach_request_message = [type |-> "normal"]
+/\ amf_call_connect_message = 0
+/\ amf_roam0_emergency_number_set = {"911"}
+/\ amf_home_route_with_type_or_number = 0
+/\ ecc_localization_enabled = 0
+/\ amf_allow_emergency_setup = 1
+/\ user_dial_number = "0"
+/\ ue_dial_emergency = 0
+/\ amf_roam1_emergency_number_set = {"911"}
+/\ user_make_call = 0
+/\ amf_home0_emergency_number_set = {"224"}
+/\ routed_psap = "none"
+/\ ecc_localization_enabled_mnc_set = {"home1"}
+/\ amf_home1_emergency_number_set = {"911"}
+/\ ue_sim_card_present = 1
+/\ amf_1_normal_attach_accept_include_enl = 0
+/\ screen_locked = 0
+/\ ue_detach_request_message = 0
+/\ pc_AMF = "amf_emm_registered"
+
+State 10: <USER_make_call line 192, col 9 to line 195, col 1051 of module EmergencyCall_Model_auto>
+/\ amf_attach_accept_message = [emergency_number_list |-> {}, mnc |-> "home1"]
+/\ ue_emergency_number_set = {"911", "224"}
+/\ amf_0_normal_attach_accept_include_enl = 1
+/\ mnc_home_only = 0
+/\ amf_home_reject_or_allow_unmarked_emergency_request = 0
+/\ amf_roam_reject_or_allow_unmarked_emergency_request = 0
+/\ ue_emergency_setup_message = [number |-> "911", category |-> "police"]
+/\ amf_call_failure_message = [error_code |-> "none"]
+/\ amf_0_emergency_attach_accept_include_enl = 0
+/\ enable_adversary = 1
+/\ ue_current_mnc = "home1"
+/\ amf_allow_emergency_attach = 0
+/\ amf_emergency_number_set = {"911"}
+/\ amf_home_require_emergency_registration_for_emergency_session = 0
+/\ ue_valid_subscription = 0
+/\ amf_roam_route_with_type_or_number = 0
+/\ mnc_set = {"home0", "home1", "roam0", "roam1"}
+/\ amf_1_emergency_attach_accept_include_enl = 0
+/\ pc_UE = "ue_emm_registered"
+/\ ue_attach_request_message = [type |-> "normal"]
+/\ amf_call_connect_message = 0
+/\ amf_roam0_emergency_number_set = {"911"}
+/\ amf_home_route_with_type_or_number = 0
+/\ ecc_localization_enabled = 0
+/\ amf_allow_emergency_setup = 1
+/\ user_dial_number = "224"
+/\ ue_dial_emergency = 0
+/\ amf_roam1_emergency_number_set = {"911"}
+/\ user_make_call = 1
+/\ amf_home0_emergency_number_set = {"224"}
+/\ routed_psap = "none"
+/\ ecc_localization_enabled_mnc_set = {"home1"}
+/\ amf_home1_emergency_number_set = {"911"}
+/\ ue_sim_card_present = 1
+/\ amf_1_normal_attach_accept_include_enl = 0
+/\ screen_locked = 0
+/\ ue_detach_request_message = 0
+/\ pc_AMF = "amf_emm_registered"
+
+State 11: <UE_send_setup line 348, col 9 to line 414, col 978 of module EmergencyCall_Model_auto>
+/\ amf_attach_accept_message = [emergency_number_list |-> {}, mnc |-> "home1"]
+/\ ue_emergency_number_set = {"911", "224"}
+/\ amf_0_normal_attach_accept_include_enl = 1
+/\ mnc_home_only = 0
+/\ amf_home_reject_or_allow_unmarked_emergency_request = 0
+/\ amf_roam_reject_or_allow_unmarked_emergency_request = 0
+/\ ue_emergency_setup_message = [number |-> "224", category |-> "police"]
+/\ amf_call_failure_message = [error_code |-> "none"]
+/\ amf_0_emergency_attach_accept_include_enl = 0
+/\ enable_adversary = 1
+/\ ue_current_mnc = "home1"
+/\ amf_allow_emergency_attach = 0
+/\ amf_emergency_number_set = {"911"}
+/\ amf_home_require_emergency_registration_for_emergency_session = 0
+/\ ue_valid_subscription = 0
+/\ amf_roam_route_with_type_or_number = 0
+/\ mnc_set = {"home0", "home1", "roam0", "roam1"}
+/\ amf_1_emergency_attach_accept_include_enl = 0
+/\ pc_UE = "ue_call_initiated"
+/\ ue_attach_request_message = [type |-> "normal"]
+/\ amf_call_connect_message = 0
+/\ amf_roam0_emergency_number_set = {"911"}
+/\ amf_home_route_with_type_or_number = 0
+/\ ecc_localization_enabled = 0
+/\ amf_allow_emergency_setup = 1
+/\ user_dial_number = "224"
+/\ ue_dial_emergency = 1
+/\ amf_roam1_emergency_number_set = {"911"}
+/\ user_make_call = 1
+/\ amf_home0_emergency_number_set = {"224"}
+/\ routed_psap = "none"
+/\ ecc_localization_enabled_mnc_set = {"home1"}
+/\ amf_home1_emergency_number_set = {"911"}
+/\ ue_sim_card_present = 1
+/\ amf_1_normal_attach_accept_include_enl = 0
+/\ screen_locked = 0
+/\ ue_detach_request_message = 0
+/\ pc_AMF = "amf_emm_registered"
+
+State 12: <AMF_send_call_response line 418, col 9 to line 557, col 1012 of module EmergencyCall_Model_auto>
+/\ amf_attach_accept_message = [emergency_number_list |-> {}, mnc |-> "home1"]
+/\ ue_emergency_number_set = {"911", "224"}
+/\ amf_0_normal_attach_accept_include_enl = 1
+/\ mnc_home_only = 0
+/\ amf_home_reject_or_allow_unmarked_emergency_request = 0
+/\ amf_roam_reject_or_allow_unmarked_emergency_request = 0
+/\ ue_emergency_setup_message = [number |-> "224", category |-> "police"]
+/\ amf_call_failure_message = [error_code |-> "none"]
+/\ amf_0_emergency_attach_accept_include_enl = 0
+/\ enable_adversary = 1
+/\ ue_current_mnc = "home1"
+/\ amf_allow_emergency_attach = 0
+/\ amf_emergency_number_set = {"911"}
+/\ amf_home_require_emergency_registration_for_emergency_session = 0
+/\ ue_valid_subscription = 0
+/\ amf_roam_route_with_type_or_number = 0
+/\ mnc_set = {"home0", "home1", "roam0", "roam1"}
+/\ amf_1_emergency_attach_accept_include_enl = 0
+/\ pc_UE = "ue_call_initiated"
+/\ ue_attach_request_message = [type |-> "normal"]
+/\ amf_call_connect_message = 1
+/\ amf_roam0_emergency_number_set = {"911"}
+/\ amf_home_route_with_type_or_number = 0
+/\ ecc_localization_enabled = 0
+/\ amf_allow_emergency_setup = 1
+/\ user_dial_number = "224"
+/\ ue_dial_emergency = 1
+/\ amf_roam1_emergency_number_set = {"911"}
+/\ user_make_call = 1
+/\ amf_home0_emergency_number_set = {"224"}
+/\ routed_psap = "police"
+/\ ecc_localization_enabled_mnc_set = {"home1"}
+/\ amf_home1_emergency_number_set = {"911"}
+/\ ue_sim_card_present = 1
+/\ amf_1_normal_attach_accept_include_enl = 0
+/\ screen_locked = 0
+/\ ue_detach_request_message = 0
+/\ pc_AMF = "amf_call_release"
+
+152662221 states generated, 32050328 distinct states found, 7823597 states left on queue.
+The depth of the complete state graph search is 12.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 9 and the 95th percentile is 5).
+Finished in 08min 21s at (2020-06-12 20:51:27)
